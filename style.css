@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Fixedsys Excelsior 3.01";
+}
+
+.menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    font-family: "Fixedsys Excelsior 3.01";
+    background-color: black;
+}
+
+.menubar .flex-menubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.menubar .flex-menubar a {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: #0CE629;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.void-line {
+    height: 3px;
+    background-color: #0CE629;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 160px;
+}
+
+.content .intro-box {
+    display: flex; 
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .box {
+    width: 600px;
+    height: 600px; 
+    background-image: url(img/main.png);
+    background-size: 1000px;
+    filter: grayscale(100%);
+    background-position: center;
+    margin-right: 50px;
+    animation: grayscale-animation .5s infinite;
+}
+
+.content .box:hover{
+    animation: none;
+    filter: none;
+} 
+
+.content .introduction h1 {
+    font-size: 4.6875rem;
+}
+
+.content .introduction h2 {
+    margin-top: 10px;
+    font-weight: none;
+    font-size: 1.8rem;
+}
+
+.skill {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.skill h1 {
+    text-align: center;
+    font-size: 3.125rem;
+    margin-top: 30px;
+    font-family: "Fixedsys Excelsior 3.01";
+}
+
+.skill .logo-skill{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill .logo-skill img{
+    height: 100px;
+    padding: 50px;
+    filter: grayscale(100%);
+}
+
+.skill .logo-skill img:hover{
+    filter: none;
+}
+
+.project {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.project h1 {
+    font-size: 3.125rem;
+}
+
+.gallery {
+    width: 80%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.gallery li img {
+    display: block;
+    width: 100%;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    padding: 20px 50px;
+    filter: grayscale(100%) contrast(20%);
+    width: 25px;
+}
+
+footer img:hover {
+    filter: none;
+}
+
+
+
+@media (max-width: 800px) {
+    .content .box {
+        width: 400px;
+        height: 400px;
+        background-size: 700px;
+        margin-right: 0px;
+    }
+
+    .content .introduction h1{
+        text-align: center;
+    }
+
+    .content .introduction h2 {
+        text-align: center;
+    }
+}
+
+@keyframes grayscale-animation {
+    0%, 100% {
+      filter: grayscale(100%);
+    }
+    50% {
+      filter: grayscale(0%);
+    }
+  }
